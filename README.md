@@ -2,6 +2,9 @@
 
 A real-time dashboard application built with Angular 21 that displays live manufacturing data through WebSocket connections.
 
+## DEMO
+use related repository [dashboard-backend](https://github.com/jimmyww7710/dashboard-backend) as backend to get real-time data changes.
+
 ## Features
 
 - Real-time data streaming via WebSocket
