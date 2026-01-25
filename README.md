@@ -6,7 +6,7 @@ A real-time dashboard application built with Angular 21 that displays live manuf
 
 use related repository [dashboard-backend](https://github.com/jimmyww7710/dashboard-backend) as backend to get real-time data changes.
 
-![Dashboard Screenshot](./screenshots/dashboard.png)
+![Dashboard Screenshot](./screenshots/realtime-dashboard.png)
 
 ## Features
 
