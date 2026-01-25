@@ -1,0 +1,12 @@
+<h1>即時 Dashboard</h1>
+
+<div *ngIf="data() as currentData; else loading">
+    <div>{{ currentData.payload.activeMachines }} 台</div>
+    <div>{{ currentData.payload.productionPerMinute }} 件 / 分鐘</div>
+    <div>{{ (currentData.payload.defectRate * 100).toFixed(2) }} %</div>
+    <div>{{ currentData.timestamp }} 毫秒</div>
+</div>
+
+<ng-template #loading>
+  <p>等待即時資料中...</p>
+</ng-template>
