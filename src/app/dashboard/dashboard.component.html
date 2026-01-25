@@ -1,10 +1,53 @@
 <h1>即時 Dashboard</h1>
 
 <div *ngIf="data() as currentData; else loading">
-    <div>{{ currentData.payload.activeMachines }} 台</div>
-    <div>{{ currentData.payload.productionPerMinute }} 件 / 分鐘</div>
-    <div>{{ (currentData.payload.defectRate * 100).toFixed(2) }} %</div>
-    <div>{{ currentData.timestamp }} 毫秒</div>
+  <div class="metrics">
+    <div class="metric">
+      <h3>活躍機器</h3>
+      <p>{{ currentData.payload.activeMachines }} 台</p>
+    </div>
+    <div class="metric">
+      <h3>生產速率</h3>
+      <p>{{ currentData.payload.productionPerMinute }} 件 / 分鐘</p>
+    </div>
+    <div class="metric">
+      <h3>缺陷率</h3>
+      <p>{{ (currentData.payload.defectRate * 100).toFixed(2) }} %</p>
+    </div>
+  </div>
+
+  <div class="charts-container">
+    <div class="chart-box">
+      <h3>活躍機器數量</h3>
+      <div class="chart">
+        <canvas baseChart
+          [data]="barChartData"
+          [options]="barChartOptions"
+          [type]="barChartType">
+        </canvas>
+      </div>
+    </div>
+    <div class="chart-box">
+      <h3>生產趨勢</h3>
+      <div class="chart">
+        <canvas baseChart
+          [data]="lineChartData"
+          [options]="lineChartOptions"
+          [type]="lineChartType">
+        </canvas>
+      </div>
+    </div>
+    <div class="chart-box">
+      <h3>良品 vs 缺陷</h3>
+      <div class="chart">
+        <canvas baseChart
+          [data]="doughnutChartData"
+          [options]="doughnutChartOptions"
+          [type]="doughnutChartType">
+        </canvas>
+      </div>
+    </div>
+  </div>
 </div>
 
 <ng-template #loading>
