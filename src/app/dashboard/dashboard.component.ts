@@ -36,9 +36,54 @@ export class DashboardComponent {
   public lineChartOptions: ChartConfiguration['options'] = {
     responsive: true,
     maintainAspectRatio: false,
+    plugins: {
+      legend: {
+        labels: {
+          color: '#E0E0E0',
+          font: {
+            weight: 'bold',
+            size: 14
+          }
+        }
+      },
+      tooltip: {
+        titleColor: '#E0E0E0',
+        bodyColor: '#E0E0E0',
+        titleFont: {
+          weight: 'bold',
+          size: 14
+        },
+        bodyFont: {
+          weight: 'bold',
+          size: 13
+        }
+      }
+    },
     scales: {
+      x: {
+        ticks: {
+          color: '#E0E0E0',
+          font: {
+            weight: 'bold',
+            size: 13
+          }
+        },
+        grid: {
+          color: 'rgba(93, 182, 212, 0.1)'
+        }
+      },
       y: {
-        beginAtZero: true
+        beginAtZero: true,
+        ticks: {
+          color: '#E0E0E0',
+          font: {
+            weight: 'bold',
+            size: 13
+          }
+        },
+        grid: {
+          color: 'rgba(93, 182, 212, 0.1)'
+        }
       }
     }
   };
@@ -62,9 +107,54 @@ export class DashboardComponent {
   public barChartOptions: ChartConfiguration['options'] = {
     responsive: true,
     maintainAspectRatio: false,
+    plugins: {
+      legend: {
+        labels: {
+          color: '#E0E0E0',
+          font: {
+            weight: 'bold',
+            size: 14
+          }
+        }
+      },
+      tooltip: {
+        titleColor: '#E0E0E0',
+        bodyColor: '#E0E0E0',
+        titleFont: {
+          weight: 'bold',
+          size: 14
+        },
+        bodyFont: {
+          weight: 'bold',
+          size: 13
+        }
+      }
+    },
     scales: {
+      x: {
+        ticks: {
+          color: '#E0E0E0',
+          font: {
+            weight: 'bold',
+            size: 13
+          }
+        },
+        grid: {
+          color: 'rgba(93, 182, 212, 0.1)'
+        }
+      },
       y: {
-        beginAtZero: true
+        beginAtZero: true,
+        ticks: {
+          color: '#E0E0E0',
+          font: {
+            weight: 'bold',
+            size: 13
+          }
+        },
+        grid: {
+          color: 'rgba(93, 182, 212, 0.1)'
+        }
       }
     }
   };
@@ -86,7 +176,30 @@ export class DashboardComponent {
 
   public doughnutChartOptions: ChartConfiguration['options'] = {
     responsive: true,
-    maintainAspectRatio: false
+    maintainAspectRatio: false,
+    plugins: {
+      legend: {
+        labels: {
+          color: '#E0E0E0',
+          font: {
+            weight: 'bold',
+            size: 14
+          }
+        }
+      },
+      tooltip: {
+        titleColor: '#E0E0E0',
+        bodyColor: '#E0E0E0',
+        titleFont: {
+          weight: 'bold',
+          size: 14
+        },
+        bodyFont: {
+          weight: 'bold',
+          size: 13
+        }
+      }
+    }
   };
 
   public doughnutChartType: ChartType = 'doughnut';
